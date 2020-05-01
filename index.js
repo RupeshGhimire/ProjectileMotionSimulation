@@ -1,21 +1,21 @@
 let c = document.getElementById("myCanvas2");
 let ctx = c.getContext("2d");
 
-let canvasWidth = c.width;
-let canvasHeight = c.height;
+const canvasWidth = c.width;
+const canvasHeight = c.height;
 
-let startPointX = 100;
-let startPointY = canvasHeight - 100;
+const startPointX = 100;
+const startPointY = canvasHeight - 100;
 
 let x = startPointX;
 let y = startPointY;
 
-let gravity = 9.8;
-let velocity = 100;
+const gravity = 9.8;
+const velocity = 100;
 
 let t = 0;
 
-let radain = Math.PI/3;
+const radian = Math.PI/3;
 
 function drawBall() {
     ctx.beginPath();
@@ -36,9 +36,9 @@ function drawLines() {
 }
 
 function draw() {
-    x = velocity * t * Math.sin(radain);
+    x = velocity * t * Math.sin(radian);
     x = x + startPointX;
-    y = velocity * t * Math.cos(radain) - 0.5 * gravity * t * t;
+    y = velocity * t * Math.cos(radian) - 0.5 * gravity * t * t;
     y = canvasHeight - y;
     y = y - (canvasHeight-startPointY);
     drawBall(); 
