@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Collision Testing</title>
+    <style>
+        body {
+            background: darkgray;
+        }
+
+        .wallPaper {
+            
+            position: absolute;
+            background: rgb(3, 139, 48);
+            display: flex;
+            margin: 2% ;
+            /* height: 570px; */
+            /* width: 1300px; */
+        }
+
+        canvas {
+            z-index: 1;
+            background: rgb(243, 234, 197);
+            display: block;
+            margin: 10px;
+        }
+
+        .VL1{
+            z-index: 2;
+            position: absolute;
+            left: 109px;
+            height: 500px;
+            border-left: 2px solid black;
+            margin-top:10px;
+        }
+
+        .HL1{
+            z-index: 3;
+            position: absolute;
+            top: 409px;
+            width: 1000px;
+            border-top: 2px solid black;
+            margin-left: 10px;
+        }
+    
+    </style>
+    
+</head>
+
+<body>   
+    
+    <div id="wallPaper" class="wallPaper"> 
+        <div class="VL1"></div>
+        <div class="HL1"></div>
+        <canvas id="myCanvas2" height="500" width="1000"></canvas>
+    </div>
+    
+
+<script src="index.js"></script>
+</body>
+
+</html>
